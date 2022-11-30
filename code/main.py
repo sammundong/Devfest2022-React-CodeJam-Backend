@@ -36,14 +36,6 @@ def rm(prod, user_id):
         del prod[8]
     return prod
 
-class json_out(BaseModel):
-    id: int
-    name: str
-    birth: str
-    bloodsugar: float
-    bloodpressure: float
-    ttime: str
-
 # ----------API------------
 # 테이블에 있는 모든 사용자 정보 GET
 @app.get("/product")
