@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from typing import List
 from starlette.middleware.cors import CORSMiddleware
 from db import ENGINE
 from model import ProductInfo, UserInfo
@@ -18,6 +17,33 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+def rm(prod, user_id):
+    if user_id == 0:
+        del prod[0]
+        del prod[0]
+        del prod[0]
+    elif user_id == 1:
+        del prod[3]
+        del prod[3]
+        del prod[8]
+    elif user_id == 2:
+        del prod[5]
+        del prod[6]
+        del prod[6]
+    else:
+        del prod[6]
+        del prod[8]
+        del prod[8]
+    return prod
+
+class json_out(BaseModel):
+    id: int
+    name: str
+    birth: str
+    bloodsugar: float
+    bloodpressure: float
+    ttime: str
+
 # ----------API------------
 # 테이블에 있는 모든 사용자 정보 GET
 @app.get("/product")
@@ -30,6 +56,11 @@ def read_users():
 def read_user(user_id: int):
     with session_factory() as session:
         user = session.query(UserInfo).\
-            filter(UserInfo.userID == user_id).limit(1).all()
-        return user
+            filter(UserInfo.userID == user_id).all()
 
+        prod = session.query(ProductInfo.name, ProductInfo.img, ProductInfo.price).all()
+
+        prod = rm(prod, user_id)
+
+        user.append({"other":prod})
+        return user

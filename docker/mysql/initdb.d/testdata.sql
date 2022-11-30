@@ -47,3 +47,7 @@ INSERT INTO productinfo (id, userID, name, img, price, dates, category, info, ch
 "https://i0.wp.com/opensea.kr/wp-content/uploads/2021/01/IMG_1794.jpeg?resize=900%2C640&ssl=1", 640.56, '2022-12-17', "Digital device", 
 "MacBook Air m1 13-inch m1 chipset 8GB RAM 256GB SSD model. Manufacturing year and month is January 2021. There are boxes, apple stickers, instructions, and no charger. (We still have the plastic wrap around the MacBook.) I used it mainly for homework or typing, and I don't use it much, so it's in good condition. The battery status is 99%, and the factory has been initialized, so you can use it right after setting it up. We'll deal only with direct transactions! Thank you!", 
 4, 1, 127);
+INSERT INTO productinfo (id, userID, name, img, price, dates, category, info, chats, favorites, views) VALUES (10, 3, "Macbook air m1", 
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTezUN1poDjNflt1pr3LX8idz0hr7G6dXQTZw&usqp=CAU", 22.74, '2022-12-17', "Books", 
+"Sell books that only read once.", 
+2, 3, 109);
