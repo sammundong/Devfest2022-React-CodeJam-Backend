@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from db import ENGINE
 from model import ProductInfo, UserInfo
-from sqlalchemy.orm import sessionmaker, contains_eager
+from sqlalchemy.orm import sessionmaker
 session_factory = sessionmaker(bind=ENGINE)
 
 app = FastAPI()

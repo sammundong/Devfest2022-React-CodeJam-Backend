@@ -20,9 +20,6 @@ class ProductInfo(Base):
     views = Column(Integer, nullable=False)
 
 
-
-
-
 class UserInfo(Base):
     __tablename__ = 'userinfo'
     userID = Column(Integer, primary_key=True)
@@ -45,6 +42,7 @@ class Product(BaseModel):
     chats: int
     favorites: int
     views: int
+
 
 class User(BaseModel):
     userID: int
