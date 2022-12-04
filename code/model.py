@@ -4,8 +4,6 @@ from sqlalchemy import Column, Integer, String, Float, DateTime, TIMESTAMP, Date
 from pydantic import BaseModel
 from db import Base
 from db import ENGINE
-
-
 # user 테이블 정의
 class ProductInfo(Base):
     __tablename__ = 'productinfo'
@@ -20,6 +18,7 @@ class ProductInfo(Base):
     chats = Column(Integer, nullable=False)
     favorites = Column(Integer, nullable=False)
     views = Column(Integer, nullable=False)
+
 
 
 
