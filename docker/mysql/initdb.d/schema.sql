@@ -11,7 +11,7 @@ CREATE TABLE productinfo (
     favorites INT NOT NULL,
     views INT NOT NULL,
     PRIMARY KEY (id)
-);
+)  default character set utf8 collate utf8_general_ci;
 
 CREATE TABLE userinfo (
     userID INT NOT NULL,
@@ -20,4 +20,4 @@ CREATE TABLE userinfo (
     location VARCHAR(30) NOT NULL,
     rating FLOAT NOT NULL,
     PRIMARY KEY (userID)
-);
+) default character set utf8 collate utf8_general_ci;
